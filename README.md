@@ -43,7 +43,7 @@ telco-churn-prediction-nlp/
 
 - 📂 Kaggle Dataset: https://www.kaggle.com/datasets/beatafaron/telco-customer-churn-realistic-customer-feedback
 - 📓 Kaggle EDA Notebook: (https://www.kaggle.com/code/beatafaron/exploring-customer-churn-gpt-generated-feedback)
-- 📄 LinkedIn Post: (coming soon)
+- 📄 LinkedIn Post: (https://www.linkedin.com/posts/activity-7338521353328717825-4HZo?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAbbo1cBVAX0dyPMHKA7g7F3wzkcP133cAI)
 
 ---
 

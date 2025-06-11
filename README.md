@@ -32,9 +32,17 @@ telco-churn-prediction-nlp/
 - Feedbacks are realistic, diverse, and matched to customer profile
 - Prepared for classification, topic modeling, or embeddings
 
+## 🧠 Techniques Used
+
+- OpenAI API (`gpt-3.5-turbo`) for customer feedback generation
+- TextBlob for sentiment analysis
+- Pandas / Seaborn for EDA
+- Planned: TF-IDF, classification, clustering, embeddings
+
 ## 🔗 Related Links
 
 - 📂 Kaggle Dataset: https://www.kaggle.com/datasets/beatafaron/telco-customer-churn-realistic-customer-feedback
+- 📓 Kaggle EDA Notebook: (https://www.kaggle.com/code/beatafaron/exploring-customer-churn-gpt-generated-feedback)
 - 📄 LinkedIn Post: (coming soon)
 
 ---

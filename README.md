@@ -1,50 +1,62 @@
-# Telco Customer Churn – ML + NLP + Power BI
+# Telco Churn Prediction with NLP & Fallback Strategy
 
-This project reimagines the classic Telco Churn dataset by enriching it with AI-generated customer feedback. It allows for advanced use cases involving:
-
-- 🌟 Churn prediction (ML model)
-- 💬 Sentiment classification from reviews (NLP)
-- 📊 Interactive dashboard (Power BI)
-- 💡 Exploratory analysis (Python + PySpark)
-
-## 📁 Project Structure
-
-```
-telco-churn-prediction-nlp/
-│
-├── data/
-│   └── telco_churn_with_all_feedback.csv
-├── eda/
-│   ├── telco_eda_python.ipynb
-│   └── telco_eda_spark.dbc
-├── models/
-│   ├── churn_model.pkl
-│   └── feedback_classifier.ipynb
-├── dashboards/
-│   └── powerbi_screenshot.png
-├── utils.py
-└── README.md
-```
-
-## 📍 Highlights
-
-- Feedbacks generated using `gpt-3.5-turbo` (OpenAI API)
-- Feedbacks are realistic, diverse, and matched to customer profile
-- Prepared for classification, topic modeling, or embeddings
-
-## 🧠 Techniques Used
-
-- OpenAI API (`gpt-3.5-turbo`) for customer feedback generation
-- TextBlob for sentiment analysis
-- Pandas / Seaborn for EDA
-- Planned: TF-IDF, classification, clustering, embeddings
-
-## 🔗 Related Links
-
-- 📂 Kaggle Dataset: https://www.kaggle.com/datasets/beatafaron/telco-customer-churn-realistic-customer-feedback
-- 📓 Kaggle EDA Notebook: (https://www.kaggle.com/code/beatafaron/exploring-customer-churn-gpt-generated-feedback)
-- 📄 LinkedIn Post: (https://www.linkedin.com/posts/activity-7338521353328717825-4HZo?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAbbo1cBVAX0dyPMHKA7g7F3wzkcP133cAI)
+This project simulates a real-world churn prediction scenario in the telecom industry, enriched with GPT-generated customer feedback. It evaluates both structured-only models and hybrid models that incorporate noisy textual feedback. The pipeline includes a fallback mechanism and production-style features such as a Feature Store.
 
 ---
 
-Stay tuned for notebooks, Power BI dashboard, and sentiment analysis coming next!
+## 📦 Dataset
+
+The data is available on Kaggle:  
+👉 [Telco Customer Churn – Realistic Customer Feedback](https://www.kaggle.com/datasets/beatafaron/telco-customer-churn-realistic-customer-feedback)
+
+It contains:
+- Clean & noisy versions of customer feedback
+- Structured telco data (contract, usage, payments)
+- Churn labels
+
+---
+
+## 📘 Project Structure
+
+All notebooks are available in the [`notebooks/`](notebooks) folder.
+
+| Notebook | Description |
+|----------|-------------|
+| **01** – Exploration & Feedback Insights | EDA + exploration of GPT-generated feedback |
+| **02** – Simulate Feedback Noise | Introduces real-world text noise and tests fallback conditions |
+| **03** – Fallback Models Comparison | Logistic Regression vs XGBoost vs Random Forest vs Neural Net (structured-only) |
+| **04** – Model with Feedback | Combines structured data with customer feedback (TF-IDF + ML) |
+| **05** – Feedback Knowledge Transfer | Simulates passing textual signal to fallback model via proxy features |
+| **06** – Feature Store & Weekly Prediction Job | Simulates a production scenario with registered features & automated inference |
+| **Extra** – How to Build a Scoring Card | Tutorial-style notebook for scorecards (WoE, IV, scaling, PSI) |
+
+---
+
+## 🧠 What You’ll Learn
+
+- How to simulate noisy NLP data in churn prediction
+- How to implement a hybrid model with fallback logic
+- How to compute WoE, IV, PSI and build logistic regression scorecards
+- How to use Databricks Feature Store & MLflow for model deployment
+- How to design structured yet flexible pipelines for production
+
+---
+
+## 🧰 Tech Stack
+
+`Python`, `Pandas`, `Scikit-learn`, `XGBoost`, `TF-IDF`,  
+`Databricks`, `MLflow`, `PySpark`, `Feature Store`,  
+`WoE / IV`, `PSI`, `Regex`, `EDA`, `matplotlib`, `shap`
+
+---
+
+## 👩‍💻 Author
+
+Beata Faron  
+- 💼 [LinkedIn](https://www.linkedin.com/in/beata-faron-24764832/)  
+- 🧠 [Kaggle](https://www.kaggle.com/beatafaron)  
+- 📂 [GitHub Projects](https://github.com/BeataFaron)
+
+---
+
+⭐ If you found this project useful or interesting, feel free to star the repo!
